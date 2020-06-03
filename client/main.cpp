@@ -1,10 +1,25 @@
 #include <stdio.h>
+#include "../common/constants.h"
+#include "../common/packet.h"
+#include "../common/utils.h"
+#include <string.h>
 
-#define SERVER_HOST = "localhost";
-#define SERVER_PORT = 1998;
+int main() {
+    printf("Hello World\n");
+    char* iMsg = readLine(MAX_MSG_LEN);
+    char* iUsername = readLine(MAX_USERNAME_LEN);
+   
+    char* str2sent = composeMsgPacket(iMsg, iUsername);
+    printf(str2sent);
 
-#define MAX_MSG_LEN = 1024;
+    // MessagePacket msgPacket = MessagePacket(iMsg, iUsername);
+    // printf("%s\n", msgPacket.getMsg());
+    // printf("%s\n", msgPacket.getUsername());
+    // char* v = (char*)malloc(sizeof(char)*PACKET_LEN);
+    // strcpy(v, msgPacket.getPacket());
+    // MessagePacket msg2 = MessagePacket(v);
+    // printf("%s\n", msg2.getMsg());
+    // printf("%s\n", msg2.getUsername());
 
-void main() {
     // Client main code here
 }
