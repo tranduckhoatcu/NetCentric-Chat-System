@@ -1,5 +1,5 @@
-#ifndef IMPORTED_UTILS_H
-#define IMPORTED_UTILS_S
+#ifndef IMPORTED_UTILS_CPP
+#define IMPORTED_UTILS_CPP
 
 #include <stdio.h>
 #include <stdlib.h>

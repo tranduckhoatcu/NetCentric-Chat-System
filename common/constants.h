@@ -9,4 +9,6 @@
 #define PACKET_LEN 1124 // Important: must be = MAX_MSG_LEN + MAX_USERNAME_LEN
 #define PACKET_FORMAT "%1024s%100s"
 
+#define USER_MAX_AGE 60*5 // unit: seconds, how long the user live in the server
+
 #endif

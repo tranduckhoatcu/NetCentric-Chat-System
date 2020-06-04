@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "../common/constants.h"
-#include "../common/packet.h"
-#include "../common/utils.h"
+#include "../common/packet.cpp"
+#include "../common/utils.cpp"
 #include <string.h>
 
 int main() {

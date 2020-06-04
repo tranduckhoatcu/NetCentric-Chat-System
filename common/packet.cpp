@@ -1,6 +1,9 @@
-#include "packet.h"
+#ifndef IMPORTED_PACKET_CPP
+#define IMPORTED_PACKET_CPP
+
+#include "constants.h"
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 char* composeMsgPacket(char* msg, char* username) {
     char* packet = (char*)malloc(sizeof(char)*PACKET_LEN);
@@ -8,15 +11,4 @@ char* composeMsgPacket(char* msg, char* username) {
     return packet;
 }
 
-MessagePacket::MessagePacket(char* _msg, char* _username) {
-    strcpy(msg, _msg);
-    strcpy(username, _username);
-    char _packet[PACKET_LEN];
-    sprintf(_packet, PACKET_FORMAT, _msg, _username);
-    strcpy(packet, _packet);
-};
-
-MessagePacket::MessagePacket(char rawData[PACKET_LEN]) {
-    strcpy(packet, rawData);
-    sscanf(rawData, PACKET_FORMAT, msg, username);
-};
+#endif
